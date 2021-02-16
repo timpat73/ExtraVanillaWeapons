@@ -1,0 +1,4 @@
+displayName = Extra Vanilla Weapons
+author = Timpat73
+version = 0.2
+homepage = https://github.com/timpat73/ExtraVanillaWeapons
