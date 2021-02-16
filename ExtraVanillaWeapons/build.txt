@@ -1,0 +1,3 @@
+displayName = Extra Vanilla Weapons
+author = Timpat73
+version = 0.2

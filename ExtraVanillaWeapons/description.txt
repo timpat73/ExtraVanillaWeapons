@@ -1,0 +1,9 @@
+Extra Vanilla Weapons adds upgrades to vanilla weapons, and some custom weapons.
+
+Ver 0.2 Adds:
+*2 new bosses which are both unfinished
+
+Ver 0.1 Adds: 
+*Upgrades for the book of skulls until post moon lord.
+*An upgrade for the sniper rifle [WIP]
+*A new sword [WIP]
