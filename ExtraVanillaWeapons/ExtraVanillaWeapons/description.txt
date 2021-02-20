@@ -1,0 +1,22 @@
+Extra Vanilla Weapons adds upgrades to vanilla weapons, and some custom weapons.
+Ver 0.4
+*Added Otherworldly Leaf Blower
+*Added Meaty Globs
+*Added Music for PATIENT {57X}
+*Improved PATIENT {57X} AI
+
+Ver 0.3
+*A new spear [WIP]
+*A github repository which i do not know how to use
+	Patch 0.3.1
+	*Added a homepage
+	Patch 0.3.2
+	*Fixed the icon
+
+Ver 0.2
+*2 new bosses which are both unfinished
+
+Ver 0.1 
+*Upgrades for the book of skulls until post moon lord.
+*An upgrade for the sniper rifle [WIP]
+*A new sword [WIP]
