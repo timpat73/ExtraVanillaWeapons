@@ -1,4 +1,4 @@
 displayName = Extra Vanilla Weapons
 author = Timpat73
-version = 0.4.0
+version = 0.5.0
 homepage = https://forums.terraria.org/index.php?threads/extra-vanilla-weapons-doesnt-actually-add-extra-vanilla-weapons.103202/

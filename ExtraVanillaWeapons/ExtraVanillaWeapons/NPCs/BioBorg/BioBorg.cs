@@ -1,3 +1,4 @@
+using static ExtraVanillaWeapons.World;
 using ExtraVanillaWeapons.Dusts;
 using ExtraVanillaWeapons.Projectiles;
 using Microsoft.Xna.Framework;
@@ -346,6 +347,8 @@ namespace ExtraVanillaWeapons.NPCs.BioBorg
 				Item.NewItem(npc.getRect(), mod.ItemType("BlackHoleSword"));
 			}
 			Item.NewItem(npc.getRect(), mod.ItemType("MeatGlobuloid"), Main.rand.Next(15, 31));
+
+			downedBioBorg = true;
 		}
 	}
 }

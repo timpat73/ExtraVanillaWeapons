@@ -17,7 +17,7 @@ namespace ExtraVanillaWeapons.Items
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Launches you backwards at extremely high speeds\nRequires rockets to use\n\"You should learn to control the recoil\"");
+            Tooltip.SetDefault("Launches you backwards at extremely high speeds\nRequires rockets to use\n\"You should really learn to control the recoil\"");
             DisplayName.SetDefault("Otherworldy Leaf Blower");
         }
 
@@ -36,7 +36,7 @@ namespace ExtraVanillaWeapons.Items
             item.value = Item.buyPrice(5, 0, 0, 0);
             item.rare = 6;
             item.autoReuse = true;
-            item.UseSound = SoundID.Item11;
+            item.UseSound = SoundID.Item122;
             item.shoot = item.shoot = ModContent.ProjectileType<RocketJumpProjectile>();
             item.shootSpeed = 12f;
             item.scale = 2.3f;

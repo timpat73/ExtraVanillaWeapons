@@ -9,79 +9,92 @@ namespace ExtraVanillaWeapons.Projectiles
 {
 	public class BlackHoleSpear : ModProjectile 
 	{
-		public override void SetDefaults()
-		{
-			projectile.width = 64;
-			projectile.height = 64;
-			projectile.aiStyle = 19;
-			projectile.penetrate = -1;
-			projectile.scale = 1.6f;
-			projectile.alpha = 0;
+        public bool isAttached = false;
 
-			projectile.hide = true;
-			projectile.ownerHitCheck = true;
-			projectile.melee = true;
+        public bool targetFound = false;
+        public int spawnTime = 60;
+        
+        public override void SetStaticDefaults()
+        {
+            Main.projFrames[projectile.type] = 4;
+        }
+
+        public override void SetDefaults()
+		{
+			projectile.width = 32;
+			projectile.height = 32;
+			projectile.aiStyle = -1;
+			projectile.penetrate = -1;
+			projectile.scale = 0.001f;
+			projectile.alpha = 50;
+			projectile.light = 1.5f;
+			projectile.timeLeft = 120;
+
+			projectile.ranged = true;
 			projectile.tileCollide = false;
 			projectile.friendly = true;
-		}
 
-		
-		
-		public float movementFactor 
-		{
-			get => projectile.ai[0];
-			set => projectile.ai[0] = value;
-		}
+            projectile.usesLocalNPCImmunity = true;
+            projectile.localNPCHitCooldown = 10;
+        }
 
 		
 		public override void AI()
 		{
-			
-			
-			Player projOwner = Main.player[projectile.owner];
-			
-			Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
-			projectile.direction = projOwner.direction;
-			projOwner.heldProj = projectile.whoAmI;
-			projOwner.itemTime = projOwner.itemAnimation;
-			projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
-			projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
-			
-			if (!projOwner.frozen)
-			{
-				if (movementFactor == 0f) 
-				{
-					movementFactor = 3f; 
-					projectile.netUpdate = true; 
-				}
-				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 3) 
-				{
-					movementFactor -= 2.4f;
-				}
-				else 
-				{
-					movementFactor += 2.1f;
-				}
-			}
-			
-			projectile.position += projectile.velocity * movementFactor;
-			
-			if (projOwner.itemAnimation == 0)
-			{
-				projectile.Kill();
-			}
-			
-			
-			projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
-			
-			if (projectile.spriteDirection == -1)
-			{
-				projectile.rotation -= MathHelper.ToRadians(90f);
-			}
+            if (++projectile.frameCounter >= 10)
+            {
+                projectile.frameCounter = 0;
+                if (++projectile.frame >= 4)
+                {
+                    projectile.frame = 0;
+                }
+            }
+            if (targetFound == true)
+            {
+                
 
+                for (int i = 0; i < 200; i++)
+                {
+                    NPC target = Main.npc[i];
 
+                    //Get the shoot trajectory from the projectile and target
+                    float shootToX = target.position.X + (float)target.width * 0.5f - projectile.Center.X;
+                    float shootToY = target.position.Y - projectile.Center.Y;
+                    float distance = (float)System.Math.Sqrt((double)(shootToX * shootToX + shootToY * shootToY));
 
-		}
+                    //If the distance between the live targeted npc and the projectile is less than 480 pixels
+                    if (distance < 150f && !target.friendly && target.active)
+                    {
+                        
+                        if (isAttached == false)
+                        {
+                            projectile.timeLeft = 180;
+                            isAttached = true;
+                        }
+                        //Divide the factor, 3f, which is the desired velocity
+                        distance = 3f / distance;
+
+                        //Multiply the distance by a multiplier if you wish the projectile to have go faster
+                        shootToX *= distance * 5;
+                        shootToY *= distance * 5;
+
+                        //Set the velocities to the shoot values
+                        projectile.velocity.X = shootToX;
+                        projectile.velocity.Y = shootToY;
+                    }
+
+                }
+            }
+            else if (spawnTime <= 0)
+            {
+                targetFound = true;                
+            }
+            else 
+            {
+                spawnTime -= 1;
+                projectile.scale += 0.02f;
+            }
+        }
 	}
 }
         

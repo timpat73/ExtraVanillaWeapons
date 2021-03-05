@@ -34,4 +34,15 @@ namespace ExtraVanillaWeapons.Items
 
 
     }
+
+    public class MeatyGlobalNPC : GlobalNPC
+    {
+        public override void NPCLoot(NPC npc)
+        {
+            if ((npc.type == 113))
+            {
+                Item.NewItem(npc.getRect(), mod.ItemType("MeatGlobuloid"), Main.rand.Next(15, 31));
+            }
+        }
+    }
 }

@@ -1,4 +1,15 @@
-Extra Vanilla Weapons adds upgrades to vanilla weapons, and some custom weapons.
+Extra Vanilla Weapons was supposed to add extra vanilla wepaons (duh) but it lead out of hand so now its a mod that generally adds more content.
+
+Currently Extra Vanilla Weapons has:
+8 Weapons
+2 Bosses
+
+Ver 0.5
+*Reworked Abbysal Looking Glass
+*Added the Blood Rush sword
+*Added correct sound for items
+*Better icon
+
 Ver 0.4
 *Added Otherworldly Leaf Blower
 *Added Meaty Globs

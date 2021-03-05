@@ -33,7 +33,7 @@ namespace ExtraVanillaWeapons.Items
             item.autoReuse = true; 
             item.shoot = 585; 
             item.shootSpeed = 10; 
-            item.UseSound = SoundID.Item11;
+            item.UseSound = SoundID.Item20;
             item.mana = 20;
         }
 
