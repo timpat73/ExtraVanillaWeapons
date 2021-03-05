@@ -24,9 +24,8 @@ namespace ExtraVanillaWeapons.Items
             item.noMelee = true; 
             item.width = 44; 
             item.height = 14; 
-            item.useTime = 10; 
-            item.useAnimation = 10; 
-            item.reuseDelay = 20;
+            item.useTime = 25; 
+            item.useAnimation = 25;
             item.useStyle = 5; 
             item.knockBack = 5f;
             item.value = Item.buyPrice(5, 0, 0, 0); 
@@ -61,9 +60,8 @@ namespace ExtraVanillaWeapons.Items
             {   
                 item.useStyle = 5;
                 item.noUseGraphic = false;
-                item.useTime = 15;
-                item.useAnimation = 45;
-                item.reuseDelay = 0;
+                item.useTime = 25;
+                item.useAnimation = 25;
                 item.damage = 100;
                 item.shoot = 10;
                 item.shootSpeed = 50;

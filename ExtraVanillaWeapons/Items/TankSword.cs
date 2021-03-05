@@ -33,7 +33,7 @@ namespace ExtraVanillaWeapons.Items
             item.value = Item.buyPrice(5, 0, 0, 0); 
             item.rare = 8; 
             item.autoReuse = true;
-            item.UseSound = SoundID.Item11;
+            item.UseSound = SoundID.Item1;
             item.shootSpeed = 10;
             item.scale = 3.3f;
         }       

@@ -1,9 +1,33 @@
-Extra Vanilla Weapons adds upgrades to vanilla weapons, and some custom weapons.
+Extra Vanilla Weapons was supposed to add extra vanilla wepaons (duh) but it lead out of hand so now its a mod that generally adds more content.
 
-Ver 0.2 Adds:
+Currently Extra Vanilla Weapons has:
+8 Weapons
+2 Bosses
+
+Ver 0.5
+*Reworked Abbysal Looking Glass
+*Added the Blood Rush sword
+*Added correct sound for items
+*Better icon
+
+Ver 0.4
+*Added Otherworldly Leaf Blower
+*Added Meaty Globs
+*Added Music for PATIENT {57X}
+*Improved PATIENT {57X} AI
+
+Ver 0.3
+*A new spear [WIP]
+*A github repository which i do not know how to use
+	Patch 0.3.1
+	*Added a homepage
+	Patch 0.3.2
+	*Fixed the icon
+
+Ver 0.2
 *2 new bosses which are both unfinished
 
-Ver 0.1 Adds: 
+Ver 0.1 
 *Upgrades for the book of skulls until post moon lord.
 *An upgrade for the sniper rifle [WIP]
 *A new sword [WIP]
