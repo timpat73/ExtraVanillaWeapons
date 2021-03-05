@@ -1,4 +1,4 @@
-Extra Vanilla Weapons was supposed to add extra vanilla wepaons (duh) but it lead out of hand so now its a mod that generally adds more content.
+Extra Vanilla Weapons was supposed to add extra vanilla weapons (duh) but it lead out of hand so now its a mod that generally adds more content.
 
 Currently Extra Vanilla Weapons has:
 8 Weapons
@@ -9,6 +9,10 @@ Ver 0.5
 *Added the Blood Rush sword
 *Added correct sound for items
 *Better icon
+	Patch 0.5.1
+	*Updated icon
+	*Fixed the typo in the description
+	*Removed herobrine
 
 Ver 0.4
 *Added Otherworldly Leaf Blower
